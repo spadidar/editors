@@ -67,10 +67,10 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-"set hlsearch
+set hlsearch
 
 " Makes search act like search in modern browsers
-" set incsearch
+set incsearch
 
 " For regular expressions turn magic on
 set magic
@@ -119,6 +119,11 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+set expandtab "will convert tabs to spaces
+set autoindent "will keep indentation level from previous line
+set shiftwidth=4 "will affect block indentation with >> and <<
+set softtabstop=4 "sets the length of soft tab in spaces
+set tabstop=8 "sets the width of tab character
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -142,7 +147,7 @@ set clipboard=unnamedplus
 "map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-˝map <C-j> <C-W>j
+"map <C-j> <C-W>j
 "map <C-k> <C-W>k
 "map <C-h> <C-W>h
 "map <C-l> <C-W>l
