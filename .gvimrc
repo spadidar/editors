@@ -311,72 +311,6 @@ endfunction
 "------------------------------------------------------------------------------
 " Standard stuff.
 "------------------------------------------------------------------------------
-set et
-set sw=2
-set tw:72              " was 72 chars.... but I do web dev so fuck it..
-set nocompatible        " Disable vi compatibility.
-set nobackup            " Do not keep a backup file.
-set undolevels=200      " Number of undo levels.
-set showcmd             " Show (partial) command in status line.
-set showmatch           " Show matching brackets.
-set showmode            " Show current mode.
-set ruler               " Show the line and column numbers of the cursor.
-set ignorecase          " Case insensitive matching.
-set incsearch           " Incremental search.
-set scrolloff=5         " Keep a context when scrolling.
-set digraph             " Required for e.g. German umlauts.
-set noerrorbells        " No beeps.
-" set nomodeline          " Disable modeline.
-set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
-set gdefault            " Use 'g' flag by default with :s/foo/bar/.
-set magic               " Use 'magic' patterns (extended regular expressions).
-set tabstop=2           " Number of spaces <tab> counts for.
-set ttyfast             " We have a fast terminal connection.
-set hlsearch            " Highlight search matches.
-" set encoding=utf-8      " Set default encoding to UTF-8.
-" set showbreak=+         " Show a '+' if a line is longer than the screen.
-" set laststatus=2        " When to show a statusline.
-" set autowrite           " Automatically save before :next, :make etc.
-
-set nostartofline       " Do not jump to first character with page commands,
-                        " i.e., keep the cursor in the current column.
-set viminfo='20,\"50    " Read/write a .viminfo file, don't store more than
-                        " 50 lines of registers.
-
-" Tell vim which characters to show for expanded TABs,
-" trailing whitespace, and end-of-lines. VERY useful!
-set listchars=tab:>-,trail:·,eol:$
-
-" Path/file expansion in colon-mode.
-set wildmode=list:longest
-set wildchar=<TAB>
-
-
-
-"------------------------------------------------------------------------------
-" Function keys.
-"------------------------------------------------------------------------------
-
-" F1: Toggle hlsearch (highlight search matches).
-nmap <F1> :set hls!<CR>
-
-" F2: Toggle list (display unprintable characters).
-"nnoremap <F2> :set list!<CR>
-
-" F3: Toggle expansion of tabs to spaces.
-nmap <F3> :set expandtab!<CR>
-
-" F4: Write a ChangeLog entry.
-map <F4> :r !date<CR>A Uwe Hermann <uwe@hermann-uwe.de><CR><CR> * |
-
-" F5: Insert current date.
-map <F5> :r !date<CR>
-
-map <F7> :set spell<CR>
-
-map <F2> :NERDTreeToggle<CR>
-
 "------------------------------------------------------------------------------
 " Correct typos.
 "------------------------------------------------------------------------------
@@ -475,7 +409,7 @@ iab sunday     Sunday
 map g 1G
 
 " Quit with 'q' instead of ':q'. VERY useful!
-map q :q<CR>
+"map q :q<CR>
 
 :command Gsave :!vig %:p
 
@@ -495,7 +429,6 @@ map ;H lBi<a href="<ESC>Ea"></a><ESC>3hi
 "------------------------------------------------------------------------------
 
 " Spellcheck.
-map V :!ispell -x %<CR>:e!<CR><CR>
 
 " ROT13 decode/encode the selected text (visual mode).
 " Alternative: 'unmap g' and then use 'g?'.
