@@ -153,3 +153,21 @@
 
 
 (put 'downcase-region 'disabled nil)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(unless (package-installed-p 'scala-mode2)
+  (package-refresh-contents) (package-install 'scala-mode2))
+(add-to-list 'load-path "/home/sasan/emacs-modes/")
+(require 'scala-mode2)
+
+;; load the ensime lisp code...
+(add-to-list 'load-path "/home/sasan/emacs-modes/ensime/elisp/")
+(require 'ensime)
+
+;; This step causes the ensime-mode to be started whenever
+;; scala-mode is started for a buffer. You may have to customize this step
+;; if you're not using the standard scala mode.
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
