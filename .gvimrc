@@ -41,6 +41,7 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+set confirm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,8 +122,8 @@ set wrap "Wrap lines
 
 set expandtab "will convert tabs to spaces
 set autoindent "will keep indentation level from previous line
-set shiftwidth=4 "will affect block indentation with >> and <<
-set softtabstop=4 "sets the length of soft tab in spaces
+set shiftwidth=2 "will affect block indentation with >> and <<
+set softtabstop=2 "sets the length of soft tab in spaces
 set tabstop=8 "sets the width of tab character
 
 """"""""""""""""""""""""""""""
